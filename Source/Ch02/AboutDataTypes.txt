@@ -1,0 +1,56 @@
+In Ruby, All Data Type based on classes because it is a pure Object-Oriented language.
+Data Types in Ruby:-
+  Numbers
+  Boolean
+  Strings
+  Hashes
+  Arrays
+  Symbols.
+
+1. Number: Integers & floating point.
+  Example:-
+    #float
+      price = 10.45
+    # Integers & float.
+      tax = 10.45*12/100
+
+      puts "total price of A is #{price+tax} $"
+
+2. Boolean: true & false
+  Example:-
+    if true
+      puts "I'm True!"
+    else
+      puts "I'm False!!"
+    end
+
+3. Strings: A group of characters/letters. Strings in ruby are defined by enclosing a text within a single Quotes or double Quotes.
+    Example:-
+      Name = "Ramesh"
+      intro = "I'm Ramesh"
+
+4. Hashes: Hash is a key value pair. Where the value to a key will be assigned by using => sign. Hash is same as Dictionary in Python. or A key pair is separated
+with a comma between them and all the pairs are enclosed within curly braces.
+  Example:-
+    rollOneMarks = {"English" => 95, "Hindi" => 86, "Mathematics" => 100, "Science" => 98, "SocialScience" => 96, "Computer" => 98}
+    #printing data with Subject
+    rollOneMarks.each do |subject, makrs|
+      print subject, ": ", marks, "\n"
+    end
+
+5. Arrays:- It stores data or list of Data (any Types). separated by comma and enclosed by square bracket.
+  Example:-
+    array = ["Ramesh", "Learning Ruby", 7]
+    array1 = ["Ramesh", "Learning Ruby", 7,]
+    array.each do |item|
+      puts item
+    end
+
+    array and array1 are same, In array1 the last comma will be ignored.
+
+6. Symbols:- "light-weight Strings". A Symbol is preceded by a colon(:).
+  Example:-
+    names = {:rs => "Ramesh Sutaliya", :ms => "Mohan Singh" }
+
+    puts names[:rs]
+    puts name[:ms]
