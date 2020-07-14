@@ -1,0 +1,48 @@
+Basic Print ways:-
+puts :- It'll the print the string with the new line at the end.
+print:- It prints the string without new line.
+
+Methods:->
+There are two kinds of Methods, Class Methods and Instance Methods.
+  def method_name(arguments/parameters)
+    method Logic
+    ...
+    ...
+  end
+
+Classes:->
+  A collection of methods or blueprint of object that defines the variables and Methods. Class name always starts with an uppercase letter.
+  Class Class_Name
+    def method1
+      logic...
+    end
+  end
+
+  creating an object of the class:-> obj = Class_Name.new
+
+  By default all the methods in the class will be public.
+
+  Private Methods:-
+    class Example
+      def pubMethod
+        puts "Public method"
+      end
+
+      private
+      def method2
+        puts "This is private Method"
+      end
+    end
+
+    Method initialize(): this method is used as constructor. This method will be called when object of the class gets created. This is by default a private method.
+
+    Example:->
+      class Class_Name
+        #constructor
+        def initialize
+          puts "Object has been created"
+        end
+      end
+
+    obj = Class_Name.new
+    it will print the message: Object has been created.
