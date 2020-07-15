@@ -1,0 +1,35 @@
+Extension used for ruby script: .rb
+Special Objects: true, false, nil.
+default Object: self.
+Comments:- # single line comment.
+
+Ruby Identifiers:-
+  variables:
+    - Local: starts with lowercase letter. Example: name = "Jony"
+    - Instance: Storing information within individual Objects, starts with single @. Example: @first_name = "Jony"
+    - Class: Stores information per class hierarchy, starts with double @. Example: @@age = 45
+    - Global: starts with dollar sign ($), Example: $FIRST_NAME = "Jony"
+    - Constants:  Begin with an uppercase letter. Example: String, FirstName, STDIN.
+    - keywords: Predefined, reserved terms associated with specific programming tasks and context. Example: __FILE__, class, def.
+    - Method names: same rules as per Local variables, but method can't end with ?, !, =.
+
+There is one thing is little bit different in Ruby which is:
+  calling a method and send the message.
+  Example: "53".to_i, here we called the function to_i means to integer or we send a message to a receiver function to_i.
+
+Ruby Interpreter can check programs for syntax Errors without running the program.
+  Example $ ruby -cw filename.rb, there are two flags. -c flag represents check for syntax Errors. and -w flag activates
+  a higher level of warning.
+
+Reading from a file:
+  Example:
+    data = File.read("<filename>")
+    this data will be a string object.
+
+Writing in a file: Here we have to provide the mode(file mode) as "w"(for Write).
+  Example:
+  someUserData = gets
+  #Puting into a txt file.
+  fd = File.new("filename", "w")
+  fd.puts someUserData
+  fd.close
