@@ -1,0 +1,65 @@
+Objects and Ruby:
+  The bulk of the design, Logic, and action revolves around Objects. In Ruby program our main activities are creating objects,
+  endowing them with abilities and asking them to perform actions.
+
+Ruby and Object Orientation:
+  It if an object orientated language where we can manipulate the data through objects via the program language-design.
+  Every Object is an Example or Instance of a particular class.
+
+Creating a generic object:
+  a class also an object in Ruby.
+  obj = Object.new
+  all Ruby objects are created with certain innate abilities- certain methods they know how to execute because they're ruby objects.
+
+  Defining an Objects Behavior:-
+    Example:
+      def obj.talk
+        puts "I'm an object"
+      end
+    template:
+      def <object name>.<method name>
+        <method body>
+      end
+
+    Sending message to the object (or call the object method): Here the dot is the message sending operator to the objects.
+    the left element from the dot(.) which is object will receive the right side message(from the dot).
+      <object name>.<method name>
+    Example:
+    obj.talk
+
+  The innate Behavior of an object:
+    Even a newly created object isn't a blank slate. As soon as an object comes into existence, it responds to a number
+    of messages. Every object is "born" with certain innate abilities.
+    To see a list of innate methods:
+
+    p Object.new.methods.sort
+
+    In Ruby each object have it's own Id.
+    Example:
+      obj.object_id
+
+    ID Numbers are equality of Objects:
+      It means By using object_id objects can be identified, Like obj1 or obj2 is same or different.
+      By object_id, It is the way of measuring object equality.
+
+  Method Arguments:
+    Methods can take zero or more arguments. These also allow a variable number of Arguments.
+    method(arg) #required argument.
+    method(*arg) #any Number of arguments.
+    method(a, b =0) # if the method called with one argument then it will update in b. and method called with two arguments in that case it will update both the variables
+
+
+Local Variables and variable assignment:
+  Local variable name start with a lowercase letter or an underscore. Local means they have a limited scope: is only visible in
+  a limited part of a program.
+
+  Reference and method arguments:
+  Example:
+  def change_content(val)
+    val = val+val
+    val.replace(val)
+  end
+  val = 10
+  puts val
+  change_content(val)
+  puts val
