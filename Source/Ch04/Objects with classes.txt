@@ -1,0 +1,61 @@
+Defining methods with a particular object doesn't scale.
+
+Defining a class, group Behavior (methods) into convenient bundles, so that you can quickly create many object that behave essentially
+the same way. And we can also add the methods to individual objects as well.
+
+Everything in Ruby which we handle is either an object or a construct that evaluates to an object, and every object is an instance
+of some class.
+
+Object is a built-in Ruby class.
+  Reminder:
+    obj = Object.new
+  Classes can respond to messages, just like objects;
+  The new method is a constructor ( a method whose purpose is to manufacture and return to you a new instance of the class, a newly minted object).
+
+We define a class with the "class" keyword. Classes are named with constants, a special type of identifier, it begins with a
+Capital letter. Constants are used to store information and values that don't change over the course of a program run.
+  Note: Ruby Constants can be overwritten after they're set, but they will prints a warning also.
+
+Instance method:
+  The method which will be shared with all the objects of a class, Or method which is defined in the class.
+
+singleton method:
+  Methods which we defines for a particular object.
+
+Overriding methods:
+  Once we defined an instance method in a class, we can define it again, that is, Overriding the first definition with a new one.
+
+  Example:
+  class Test
+    def x
+      puts "First definition"
+    end
+    def x
+      puts "Second definition"
+    end
+  end
+
+  Now if call the method x, the Overriding method will execute. It means latest version of that function will takes place.
+
+Reopening Classes:
+  In most of the cases we defines a class at single definition block.
+  But in ruby it is possible to reopen a class and make the addition or changes.
+  Example:
+  class Example
+    def x
+      put "I'm x"
+    end
+  end
+
+  reopening the class Example
+  class Example
+    def y
+      put "Same class Example, method y"
+    end
+  end
+
+It's not a good thing to break a class definition into separate blocks, There should be a proper reason, like as load from the disk
+at runtime from another file or may be system design demand.
+
+In General objects have there own storage.
+  Instance variables (starts with @) maintains it's value between method calls.
